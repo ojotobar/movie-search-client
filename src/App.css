@@ -88,3 +88,16 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.ImageWidth{
+  width: 80% !important;
+}
+
+.ImageHeight {
+  height: 60% !important;
+}
+
+.Dimensions {
+  width: 80% !important;
+  height: 80% !important;
+}

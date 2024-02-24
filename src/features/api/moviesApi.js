@@ -6,15 +6,12 @@ export const movieApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: `${BASE_URL}/movies`
     }),
-    tagTypes: ['Movie'],
     endpoints: (builder) => ({
         getMovieByTitle: builder.query({
             query: (title) => `?Title=${title}`,
-            providesTags: ['Movie']
         }),
         getMovieById: builder.query({
             query: (id) => `/${id}`,
-            invalidatesTags: ['Movie']
         })
     })
 });

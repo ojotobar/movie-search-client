@@ -1,8 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
-import MovieSummary from "./MovieSummary";
 import useDebounce from "../../hooks/useDebounce";
+import Movies from "./Movies";
 
 const Home = () => {
 	const [searchValue, setSearchValue] = useState('');
@@ -19,7 +19,7 @@ const Home = () => {
 									searchValue={searchValue}
 									setSearchValue={setSearchValue}
 								/>
-								<MovieSummary searchTerm={debouncedSearchValue}/>
+								<Movies searchTerm={debouncedSearchValue}/>
 							</Col>
 						</div>
 					</section>
