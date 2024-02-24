@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import Layout from './Layout';
 import { Route, Routes } from 'react-router-dom';
-import NavigationBar from './features/components/public/common/NavigationBar';
-import Footer from './features/components/public/common/Footer';
-import Home from './features/components/public/common/Home';
+import NavigationBar from './features/components/NavigationBar';
+import Footer from './features/components/Footer';
+import Home from './features/components/Home';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <NavigationBar />
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route element={<Home />} />
+          <Route path='/' element={<Home />} />
         </Route>
       </Routes>
       <Footer />

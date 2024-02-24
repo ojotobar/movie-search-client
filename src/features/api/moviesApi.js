@@ -9,7 +9,7 @@ export const movieApi = createApi({
     tagTypes: ['Movie'],
     endpoints: (builder) => ({
         getMovieByTitle: builder.query({
-            query: (title) => `/?Title=${title}`,
+            query: (title) => `?Title=${title}`,
             providesTags: ['Movie']
         }),
         getMovieById: builder.query({

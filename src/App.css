@@ -46,6 +46,11 @@
   min-height: 10vh;
 }
 
+.CenterSearchBar {
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .App {
     min-height: 100vh;
@@ -55,4 +60,25 @@
 .Footer {
   background: var(--darkLemon);
   color: var(--stainlessSteel);
+}
+
+.ButtonToLink {
+  background: transparent !important;
+  outline: none !important;
+  color: blue !important;
+  text-decoration: underline !important;
+  border: none !important;
+  padding: 0 5px !important;
+  margin: 0 !important;
+  float: right !important;
+  cursor: pointer;
+}
+
+.DeLink {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  outline: none !important;
+  text-decoration: none;
+  cursor: pointer;
 }
