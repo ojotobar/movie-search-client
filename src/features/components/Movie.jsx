@@ -2,7 +2,6 @@ import React from 'react'
 import { Badge, Button, Card, Image, Row } from 'react-bootstrap';
 
 const Movie = ({ movie }) => {
-  console.log(movie)
   return (
     <Row className='CenterSearchBar'>
         <Card style={{ width: '25rem' }}>
