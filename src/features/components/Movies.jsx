@@ -1,23 +1,26 @@
-import React from 'react'
 import useSWR from 'swr'
 import { getMovieSearchResult } from '../api/movieApi'
 import { Col, Container, Row, Spinner, Toast } from 'react-bootstrap'
 import Movie from './Movie'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { toast } from 'react-toastify'
 
 const Movies = ({ searchTerm }) => {
     const {
         isLoading,
         error,
         data
-    } = useSWR(
-        searchTerm ? searchTerm : null,
-        getMovieSearchResult
-    )
+    } = useSWR(searchTerm ? searchTerm : null, getMovieSearchResult)
 
-    console.log(data, error);
+    useEffect(() => {
+        if(error){
+            toast.error(error?.message)
+        }
+    }, [error])
+
     const content = data?.search && data?.search?.length > 0 ? 
-          data?.search?.map(movie => (
+            data?.search.map(movie => (
             <Col key={movie?.imDbId}>
                 <Link to={`/movies/${movie?.imDbId}`} className="DeLink">
                     <Movie movie={movie} />
