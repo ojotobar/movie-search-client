@@ -14,6 +14,20 @@ const Home = () => {
 	//   }
 	// }, [data])
 
+	const handleSearch = async (e) => {
+        const form = e.currentTarget;
+        if (form.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        // setValidated(true);
+        // e.preventDefault();
+        // if(phoneNumber && dishes.length > 0 && profile?.address){
+            
+        //     await createOrder(data);
+		// }
+    };
+
 	return (
 		<Container fluid className="m-0 p-0">
 			<Row className="m-0 p-0">
@@ -34,7 +48,7 @@ const Home = () => {
 													/>
 											</Col>
 											<Col xs={12} md={2} className='mb-2'>
-												<Button type="submit" className='w-100 Button text-center' style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>Search</Button>
+												<Button type="submit" className='w-100 ButtonColor text-center' style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>Search</Button>
 											</Col>
 											<Col xs={0} md={2}></Col>
 										</Row>
